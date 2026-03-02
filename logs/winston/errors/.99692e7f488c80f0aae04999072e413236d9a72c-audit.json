@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\.99692e7f488c80f0aae04999072e413236d9a72c-audit.json",
+    "files": [
+        {
+            "date": 1772411399075,
+            "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-02-06-error.log",
+            "hash": "8522eb939819fe213603f80c7581c76467ce8e46bedf0955238fa6641620e3d2"
+        }
+    ],
+    "hashType": "sha256"
+}
