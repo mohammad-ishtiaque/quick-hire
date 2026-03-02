@@ -5,12 +5,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import globalErrorHandler from "./app/middleware/globalErrorHandler.js";
-// ESM-এ লোকাল ফাইলের শেষে .js দিতে হয় এবং ফোল্ডার হলে index.js বলে দিতে হয়
 import routes from "./app/routes/index.js"; 
 import notFoundHandler from "./error/NotFoundHandler.js";
 import corsOptions from "./util/corsOptions.js";
 
-// ESM-এ __dirname তৈরি করার নিয়ম ⚙️
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

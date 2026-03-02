@@ -1,9 +1,10 @@
 node_modules/
 .env
-fileTemplate.js
+fileTemplates.js
 generateModule.js
 src\util\socketCatchAsync.js
 src\util\stripeCurrencyValidator.js
 src\mail\subscriptionExpiredTemp.js
 src\connection\socket.js
 src\connection\socketCors.js
+logs\winston/

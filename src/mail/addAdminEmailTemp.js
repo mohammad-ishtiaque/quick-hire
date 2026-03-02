@@ -1,5 +1,10 @@
-const addAdminEmailTemp = (data) =>
-    ` 
+import config from "../config/index.js"; // কনফিগ থেকে ইমেজ ইউআরএল নেওয়ার জন্য
+
+const addAdminEmailTemp = (data) => {
+  // কনফিগ থেকে ইমেজ ইউআরএল নিচ্ছি, ফলব্যাক হিসেবে খালি স্ট্রিং
+  const logoImage = config.variables.email_temp_image || ""; 
+
+  return ` 
         <html>
           <head>
             <style>
@@ -10,7 +15,6 @@ const addAdminEmailTemp = (data) =>
                 padding: 0;
               }
               .container {
-                font-family: 'Verdana', 'Arial', sans-serif;
                 max-width: 600px;
                 margin: 40px auto;
                 background-color: #ffffff;
@@ -49,7 +53,7 @@ const addAdminEmailTemp = (data) =>
                 text-align: center;
               }
               .logo-img {
-                max-width: 100%;
+                max-width: 150px; /* লোগো সাইজ কন্ট্রোল করার জন্য */
                 margin-bottom: 20px;
               }            
               .footer {
@@ -57,9 +61,6 @@ const addAdminEmailTemp = (data) =>
                 font-size: 13px;
                 color: #9e9e9e;
                 text-align: center;
-              }
-              .footer p {
-                margin: 5px 0;
               }
               a {
                 color: #8A53FE;
@@ -70,10 +71,10 @@ const addAdminEmailTemp = (data) =>
           <body>
             <div class="container">
               <div class="logo">
-                <img src="${process.env.EMAIL_TEMP_IMAGE}" alt="Logo" class="logo-img" />
+                <img src="${logoImage}" alt="Mathsbook Logo" class="logo-img" />
               </div>        
               <h1>Welcome to Mathsbook!</h1>
-              <p>Hello, ${data.name},</p>
+              <p>Hello, ${data.name || 'Admin'},</p>
               <p>We are thrilled to welcome you as a new admin in our team. Below are your account details:</p>
               
               <table>
@@ -87,26 +88,26 @@ const addAdminEmailTemp = (data) =>
                 </tr>
                 <tr>
                   <th>Phone Number</th>
-                  <td>${data.phoneNumber}</td>
+                  <td>${data.phoneNumber || 'N/A'}</td>
                 </tr>
                 <tr>
                   <th>Address</th>
-                  <td>${data.address}</td>
+                  <td>${data.address || 'N/A'}</td>
                 </tr>
               </table>
     
-              <p>As an admin at Mathsbook, you play a vital role in ensuring smooth and safe experience for our customers. Please log in to your account to get started.</p>
-              <p>If you have any questions or need any assistance, feel free to reach out to us at <a href="mailto:arifishtiaque.sparktech@gmail.com">arifishtiaque.sparktech@gmail.com</a>.</p>
-              <p>We look forward to working with you and wish you a great journey with us!</p>
-              <p>Best regards,<br>The Mathsbook Team</p>
+              <p>As an admin at Mathsbook, you play a vital role in ensuring a smooth and safe experience for our customers. Please log in to your account to get started.</p>
+              <p>If you have any questions, reach out to us at <a href="mailto:support@mathsbook.com">support@mathsbook.com</a>.</p>
+              <p>Best regards,<br><strong>The Mathsbook Team</strong></p>
             </div>
             <div class="footer">
-              <p>&copy; Mathsbook - All Rights Reserved.</p>
-              <p><a href="https://yourwebsite.com/privacy">Privacy Policy</a> | <a href="https://yourwebsite.com/contact">Contact Support</a></p>
+              <p>&copy; ${new Date().getFullYear()} Mathsbook - All Rights Reserved.</p>
+              <p><a href="#">Privacy Policy</a> | <a href="#">Contact Support</a></p>
             </div>
           </body>
         </html>
       `;
-  
-  module.exports = addAdminEmailTemp;
-  
+};
+
+// ESM Export
+export default addAdminEmailTemp;

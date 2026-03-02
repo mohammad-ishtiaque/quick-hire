@@ -5,8 +5,6 @@ import signUpEmailTemp from "../mail/signUpEmailTemp.js";
 import otpResendTemp from "../mail/otpResendTemp.js";
 import resetPassEmailTemp from "../mail/resetPassEmailTemp.js";
 import addAdminEmailTemp from "../mail/addAdminEmailTemp.js";
-import subscriptionExpiredTemp from "../mail/subscriptionExpiredTemp.js";
-// bookingEmailTemp import করো যখন ফাইলটা ready হবে
 
 const createEmailSender = (subject, templateFn) => {
   return async (email, data) => {
@@ -24,8 +22,6 @@ const EmailHelpers = {
   sendOtpResendEmail: createEmailSender("New Activation Code", otpResendTemp),
   sendResetPasswordEmail: createEmailSender("Password Reset Code", resetPassEmailTemp),
   sendAddAdminEmail: createEmailSender("Admin Account Created", addAdminEmailTemp),
-  // sendSubscriptionExpiredEmail: createEmailSender("Subscription Expired", subscriptionExpiredTemp),
-  // sendSubscriptionEmail: bookingEmailTemp ready হলে এখানে add করো
 };
 
 export default EmailHelpers;
