@@ -14,6 +14,26 @@
             "date": 1772441041995,
             "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-02-14-error.log",
             "hash": "88993ac71c7c8572769815d9bcc6abf4b6305b8638fc611321224e81a6932873"
+        },
+        {
+            "date": 1772469948261,
+            "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-02-22-error.log",
+            "hash": "b0950efc7b947f0686baaf1038ab6707f64ec9e87364e1e13dc42baaa29a6689"
+        },
+        {
+            "date": 1772474624242,
+            "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-03-00-error.log",
+            "hash": "8b472affe61492ae950fb771183ea483987b73217abbb292adf763514cb8dab0"
+        },
+        {
+            "date": 1772478002294,
+            "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-03-01-error.log",
+            "hash": "0c1b3a2d602cfd83a42c7099154a7d04d8acf8544829013bbff9d4c381ae27e6"
+        },
+        {
+            "date": 1772481617310,
+            "name": "C:\\Users\\kazim\\Documents\\Goal\\Interview\\quickhire-backend\\logs\\winston\\errors\\app-2026-03-03-02-error.log",
+            "hash": "874b0210c66685cdcdc4a84ed71166f16df1374850ef89de372cdba2c59dafff"
         }
     ],
     "hashType": "sha256"

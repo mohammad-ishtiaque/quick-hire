@@ -7,4 +7,5 @@ src\util\stripeCurrencyValidator.js
 src\mail\subscriptionExpiredTemp.js
 src\connection\socket.js
 src\connection\socketCors.js
-logs\winston/
+uploads/
+logs/
